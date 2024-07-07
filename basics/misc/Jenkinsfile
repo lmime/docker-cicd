@@ -23,7 +23,7 @@ node {
    stage('docker run') {
    
       sh "docker run --rm -tid --name docker_test -p 3000 ${docker_image}:${commit_id}"
-      docker kill docker_test
+      sh 'docker kill docker_test'
 
      }
    }
