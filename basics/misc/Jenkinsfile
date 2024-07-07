@@ -1,6 +1,6 @@
 node {
    def commit_id
-   def docker_login = 'evgenidocker'
+   def docker_login = 'lmime'
    def docker_image = 'lmime/docker-nodejs-demo'
    stage('step pre') {
      checkout scm
