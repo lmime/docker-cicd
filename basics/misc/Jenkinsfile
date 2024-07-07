@@ -1,7 +1,7 @@
 node {
    def commit_id
    def docker_login = 'evgenidocker'
-   def docker_image = 'lmime/docker-nodejs-demo'
+   def docker_image = 'evgenil/docker-nodejs-demo'
    stage('step pre') {
      checkout scm
      sh "git rev-parse --short HEAD > .git/commit-id"                        
