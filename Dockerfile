@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/framework/sdk as build-image
+FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine3.20-amd64 as build-image
 
 WORKDIR /home/app
 
@@ -14,7 +14,7 @@ COPY . .
 
 RUN dotnet publish ./AccountOwnerServer/AccountOwnerServer.csproj -o /publish/
 
-FROM mcr.microsoft.com/dotnet/framework/aspnet
+FROM mcr.microsoft.com/dotnet/nightly/aspnet:6.0-focal-amd64
 
 WORKDIR /publish
 
