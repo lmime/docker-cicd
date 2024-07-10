@@ -14,7 +14,7 @@ COPY . .
 
 RUN dotnet publish ./AccountOwnerServer/AccountOwnerServer.csproj -o /publish/
 
-FROM mcr.microsoft.com/dotnet/nightly/aspnet:6.0-focal-amd64
+FROM mcr.microsoft.com/dotnet/nightly/aspnet:6.0-alpine3.19-amd64
 
 WORKDIR /publish
 
