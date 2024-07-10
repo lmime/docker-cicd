@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0
+FROM mcr.microsoft.com/dotnet/framework/sdk:4.8.1 as build-image
 
 WORKDIR /home/app
 
@@ -14,7 +14,7 @@ COPY . .
 
 RUN dotnet publish ./AccountOwnerServer/AccountOwnerServer.csproj -o /publish/
 
-FROM microsoft/aspnetcore
+FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8.1
 
 WORKDIR /publish
 
